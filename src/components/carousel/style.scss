@@ -1,0 +1,55 @@
+.carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    min-width: 24%;
+    height: 100%;
+    left: 0;
+    margin: 0 0.5%;
+    position: relative;
+    transition: 0.8s;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__btn {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 8px;
+    background-color: #949494;
+    color: #fff;
+    position: absolute;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999999;
+    cursor: pointer;
+  }
+
+  .disable-btn {
+    background-color: #535353 !important;
+    color: #949494 !important;
+    cursor: auto;
+  }
+
+  .left {
+    left: 15px;
+  }
+
+  .right {
+    right: 15px;
+  }
+}
